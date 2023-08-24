@@ -1,0 +1,17 @@
+[registries.crates-io]
+# The sparse protocol is currently planned to become the default for crates.io in the 1.70.0 release in a few months.
+protocol = "sparse"
+
+[target.'cfg(all())']
+rustflags = [
+    "-Wclippy::fallible_impl_from",
+    "-Dclippy::unwrap_used",
+    "-Dclippy::expect_used",
+]
+
+[alias]
+format = "fmt --all"
+format-check = "fmt --all -- --check"
+lint = "clippy --all-targets --all-features -- -D warnings"
+lint-fix = "clippy --all-targets --all-features --fix --allow-dirty --allow-staged"
+coverage = "llvm-cov --no-clean --lcov --output-path coverage.lcov"
