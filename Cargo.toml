@@ -1,7 +1,14 @@
 [package]
-name = "rust-codecov-cache"
+name = "codecov-cache"
 version = "0.1.0"
 edition = "2021"
+authors = ["Yui Kitsu <kitsuyui+github@kitsuyui.com>"]
+description = "Codecov API caching"
+license = "BSD-3-Clause"
+readme = "README.md"
+repository = "https://github.com/kitsuyui/rust-codecov-cache"
+documentation = "https://docs.rs/codecov-cache"
+categories = ["api-bindings"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
