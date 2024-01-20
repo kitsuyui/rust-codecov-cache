@@ -1,6 +1,6 @@
 [package]
 name = "codecov-cache"
-version = "0.1.2"
+version = "0.2.0"
 edition = "2021"
 authors = ["Yui Kitsu <kitsuyui+github@kitsuyui.com>"]
 description = "Codecov API caching"
