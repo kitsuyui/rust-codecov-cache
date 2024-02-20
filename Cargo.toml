@@ -15,4 +15,4 @@ categories = ["api-bindings"]
 [dependencies]
 codecov = "0.4.0"
 dirs = "5.0.1"
-serde_json = "1.0.113"
+serde_json = "1.0.114"
