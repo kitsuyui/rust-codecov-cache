@@ -3,8 +3,8 @@ pub mod errors;
 
 use crate::errors::Error;
 use codecov::{
-    author::Author, branch_detail::BranchDetailAPIResponse, branches::BranchesAPIResponse,
-    commits::CommitsAPIResponse, owner::Owner, repos::Repo, Client as CodecovClient,
+    Client as CodecovClient, author::Author, branch_detail::BranchDetailAPIResponse,
+    branches::BranchesAPIResponse, commits::CommitsAPIResponse, owner::Owner, repos::Repo,
 };
 
 /**
