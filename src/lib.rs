@@ -106,12 +106,11 @@ impl Client {
             commit_id,
         ];
         // Use cache if exists
-        if let Ok(data) = self.cache_client.load(cache_key) {
-            if let Ok(value) = serde_json::from_slice(&data) {
-                if let Ok(branch_detail) = serde_json::from_value(value) {
-                    return Ok(branch_detail);
-                }
-            }
+        if let Ok(data) = self.cache_client.load(cache_key)
+            && let Ok(value) = serde_json::from_slice(&data)
+            && let Ok(branch_detail) = serde_json::from_value(value)
+        {
+            return Ok(branch_detail);
         }
         // If cache does not exist, fetch from Codecov API
         let retrieved = self.codecov_client.get_branch_detail(author, branch_name)?;
